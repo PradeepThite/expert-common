@@ -1,6 +1,6 @@
 {
   "name": "expert-common",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -33,9 +33,11 @@
   "homepage": "https://github.com/PradeepThite/expert-common#readme",
   "devDependencies": {
     "tsup": "^8.3.5",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "axios": "^1.7.7"
   },
-  "dependencies": {
+  "dependencies": {},
+  "peerDependencies": {
     "axios": "^1.7.7"
   },
   "files": [
