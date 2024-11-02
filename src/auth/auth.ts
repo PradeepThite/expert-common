@@ -12,6 +12,7 @@ const Auth = {
 
   clearToken: function (): undefined {
     this.token = "";
+    return undefined;
   },
 };
 
