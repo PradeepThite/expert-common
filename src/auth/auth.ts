@@ -5,7 +5,7 @@ const Auth = {
   },
 
   setToken: function (token: string) {
-    if (!token) {
+    if (!this.token) {
       this.token = token;
     }
   },
