@@ -9,6 +9,16 @@
   "scripts": {
     "build": "tsup"
   },
+  "exports": {
+    ".": {
+      "node": {
+        "module": "./dist/index.js",
+        "require": "./dist/index.js"
+      },
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PradeepThite/expert-common.git"
