@@ -1,19 +1,31 @@
 {
   "name": "expert-common",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PradeepThite/expert-common.git"
   },
   "author": "pradip.thite19@gmail.com",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/PradeepThite/expert-common/issues"
   },
-  "homepage": "https://github.com/PradeepThite/expert-common#readme"
+  "keywords": [
+    "test"
+  ],
+  "homepage": "https://github.com/PradeepThite/expert-common#readme",
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.7"
+  }
 }

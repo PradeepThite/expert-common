@@ -1,5 +1,5 @@
-function helloNpm() {
+function helloNpm(props: userName): string {
   return "hello NPM";
 }
 
-module.exports = helloNpm;
+export { helloNpm };
