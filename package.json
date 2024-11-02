@@ -1,6 +1,6 @@
 {
   "name": "expert-common",
-  "version": "1.2.4",
+  "version": "1.2.6",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -13,7 +13,7 @@
     "prepublishOnly": "npm run build"
   },
   "exports": {
-    "./dist": "./dist/",
+    "./dist": "./dist",
     "./dist/*": "./dist/*.js",
     "./package.json": "./package.json"
   },
