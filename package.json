@@ -1,20 +1,19 @@
 {
   "name": "expert-common",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "unpkg": "./dist/index.mjs",
   "types": "module",
   "scripts": {
+    "start": "ts-node src/index.ts",
     "build": "tsup",
     "build1": "rollup --config && terser dist/csso.js --compress --mangle -o dist/csso.min.js",
     "prepublishOnly": "npm run build"
   },
   "exports": {
-    ".": {
-      "import": "./dist/index.js"
-    },
+    "./dist": "./dist/",
     "./dist/*": "./dist/*.js",
     "./package.json": "./package.json"
   },

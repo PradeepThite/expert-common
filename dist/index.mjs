@@ -136,7 +136,7 @@ var Auth = {
         return this.token;
     },
     setToken: function setToken(token) {
-        if (!token) {
+        if (!this.token) {
             this.token = token;
         }
     },
