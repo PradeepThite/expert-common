@@ -124,7 +124,7 @@ function _ts_generator(thisArg, body) {
     }
 }
 var CONFIG = {
-    BASE_URL: "https://52.66.178.23:8082",
+    BASE_URL: "http://65.2.167.94:8082",
     token: ""
 };
 // src/service/user.ts
