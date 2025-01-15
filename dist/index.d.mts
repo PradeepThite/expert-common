@@ -31,5 +31,8 @@ declare const USER_SERVICE: {
     sendOtp: (mobile: number) => Promise<axios.AxiosResponse<axios.AxiosResponse<any, any>, any>>;
     login: (payload: ILogin) => Promise<any>;
 };
+declare const MEETING_SERVICE: {
+    getMeetings: (payload: any) => Promise<any>;
+};
 
-export { AUTH, CONFIG, type ILogin, USER_SERVICE, UTIL, type userName };
+export { AUTH, CONFIG, type ILogin, MEETING_SERVICE, USER_SERVICE, UTIL, type userName };

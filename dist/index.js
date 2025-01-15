@@ -194,6 +194,9 @@ __export(src_exports, {
     CONFIG: function() {
         return CONFIG;
     },
+    MEETING_SERVICE: function() {
+        return MEETING_SERVICE;
+    },
     USER_SERVICE: function() {
         return USER_SERVICE;
     },
@@ -293,7 +296,6 @@ var login = /*#__PURE__*/ function() {
         return _ts_generator(this, function(_state) {
             switch(_state.label){
                 case 0:
-                    console.log(payload);
                     return [
                         4,
                         import_axios.default.post("".concat(BASE_URL, "/auth/login"), payload, {
@@ -315,6 +317,34 @@ var login = /*#__PURE__*/ function() {
         return _ref.apply(this, arguments);
     };
 }();
+// src/service/meetings.ts
+var import_axios2 = __toESM(require("axios"));
+var BASE_URL2 = CONFIG.BASE_URL;
+var getMeetings = /*#__PURE__*/ function() {
+    var _ref = _async_to_generator(function(payload) {
+        var response;
+        return _ts_generator(this, function(_state) {
+            switch(_state.label){
+                case 0:
+                    return [
+                        4,
+                        import_axios2.default.post("".concat(BASE_URL2, "/expert/meetings"), payload, {
+                            headers: getCommonHeaders()
+                        })
+                    ];
+                case 1:
+                    response = _state.sent();
+                    return [
+                        2,
+                        response.data
+                    ];
+            }
+        });
+    });
+    return function getMeetings(payload) {
+        return _ref.apply(this, arguments);
+    };
+}();
 // src/index.ts
 var UTIL = {
     getCommonHeaders: getCommonHeaders
@@ -324,10 +354,14 @@ var USER_SERVICE = {
     sendOtp: sendOtp,
     login: login
 };
+var MEETING_SERVICE = {
+    getMeetings: getMeetings
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
     AUTH: AUTH,
     CONFIG: CONFIG,
+    MEETING_SERVICE: MEETING_SERVICE,
     USER_SERVICE: USER_SERVICE,
     UTIL: UTIL
 });

@@ -26,7 +26,6 @@ export const sendOtp = async (mobile: number) => {
 };
 
 export const login = async (payload: ILogin) => {
-  console.log(payload);
   const response = await axios.post(`${BASE_URL}/auth/login`, payload, {
     headers: {
       "Content-Type": "application/json",
